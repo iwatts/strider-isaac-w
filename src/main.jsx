@@ -9,6 +9,7 @@ import Dashboard from "./Dashboard";
 import CustomersList from "./CustomersList";
 import Orders from "./Orders";
 import Customer from "./Customer";
+import Inventory from "./Inventory";
 
 export const router = createBrowserRouter([
 	{
@@ -31,6 +32,10 @@ export const router = createBrowserRouter([
 			{
 				path: "customers/:customerID",
 				element: <Customer />,
+			},
+			{
+				path: "inventory",
+				element: <Inventory />,
 			},
 		],
 	},

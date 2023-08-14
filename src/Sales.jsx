@@ -1,12 +1,10 @@
 import * as React from "react";
 import Typography from "@mui/material/Typography";
 import Title from "./Title";
-import { format as DateFormat} from "date-fns";
-
-
+import { format as DateFormat } from "date-fns";
 
 export default function Sales() {
-	const currentDate = DateFormat(new Date(), 'Lo MMMM yyyy');
+	const currentDate = DateFormat(new Date(), "Lo MMMM yyyy");
 	return (
 		<React.Fragment>
 			<Title>Total Sales</Title>

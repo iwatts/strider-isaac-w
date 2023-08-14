@@ -19,7 +19,6 @@ export default function CustomersList() {
 					<TableRow>
 						<TableCell>ID</TableCell>
 						<TableCell>Name</TableCell>
-						<TableCell align="right">Sale Amount</TableCell>
 					</TableRow>
 				</TableHead>
 				<TableBody>
@@ -29,7 +28,6 @@ export default function CustomersList() {
 							<TableCell component={Link} to={`${row.id}`}>
 								{row.name}
 							</TableCell>
-							<TableCell align="right">{`$${row.amount}`}</TableCell>
 						</TableRow>
 					))}
 				</TableBody>

@@ -15,7 +15,7 @@ import Link from "@mui/material/Link";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import { mainListItems, secondaryListItems } from "./listItems";
+import { mainListItems, secondaryListItems } from "./NavigationList";
 import OutletViews from "./routes/OutletView";
 
 function Copyright(props) {
@@ -28,7 +28,7 @@ function Copyright(props) {
 		>
 			{"Copyright © "}
 			<Link color="inherit" href="https://mui.com/">
-				Your Website
+				Strider General Store
 			</Link>{" "}
 			{new Date().getFullYear()}
 			{"."}
@@ -120,7 +120,7 @@ export default function MainView() {
 							noWrap
 							sx={{ flexGrow: 1 }}
 						>
-							Dashboard
+							Strider General Store
 						</Typography>
 						<IconButton color="inherit">
 							<Badge color="secondary">

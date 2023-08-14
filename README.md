@@ -1,3 +1,9 @@
+# Strider - Isaac Watts Assessment
+
+SQL file included in the root as setup.sql
+
+For the react project, since I was using Material, I implemented the dashboard template they have, and built off that to add pages and widgets I felt would be useful.
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

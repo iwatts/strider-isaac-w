@@ -1,65 +1,39 @@
-function createMockCustomers(id, name, amount) {
-	return { id, name, amount };
+function createMockCustomers(id, name) {
+	return { id, name };
 }
 
+// TODO: These data calls should be made separately from orders
 export const MOCK_CUSTOMERS = [
-	createMockCustomers(0, "Elvis Presley", 312.44),
-	createMockCustomers(1, "Paul McCartney", 866.99),
-	createMockCustomers(2, "Tom Scholz", 100.81),
-	createMockCustomers(3, "Michael Jackson", 654.39),
-	createMockCustomers(4, "Bruce Springsteen", 212.79),
+	createMockCustomers(1, "Elizabeth"),
+	createMockCustomers(2, "Alexander"),
+	createMockCustomers(3, "Emira"),
+	createMockCustomers(4, "LJ"),
+	createMockCustomers(5, "Armand"),
+	createMockCustomers(6, "Elizabeth"),
 ];
 
-export const MOCK_CUSTOMER = {
-	first: "Your",
-	last: "Name",
+export const MOCK_PLACEHOLDER_CUSTOMER = {
+	first: "Albert",
+	last: "Einstien",
 	avatar: "https://placekitten.com/g/200/200",
-	notes: "Some notes",
+	notes: "LOREM IPSUPM: Customer Notes Go Here",
 };
 
-function createMockOrders(
-  id,
-  date,
-  name,
-  shipTo,
-  paymentMethod,
-  amount,
-) {
-  return { id, date, name, shipTo, paymentMethod, amount };
-}
+// Generate Inventory Data
+export const MOCK_INVENTORY_SOLD = [
+	{ id: 0, value: 8, label: "Book" },
+	{ id: 1, value: 2, label: "Candle" },
+	{ id: 2, value: 10, label: "Pen" },
+	{ id: 3, value: 40, label: "Paper" },
+	{ id: 4, value: 3, label: "Jar" },
+	{ id: 5, value: 8, label: "Movie" },
+];
 
-export const MOCK_ORDERS = [
-  createMockOrders(
-    0,
-    '16 Mar, 2019',
-    'Elvis Presley',
-    'Tupelo, MS',
-    'VISA ⠀•••• 3719',
-    312.44,
-  ),
-  createMockOrders(
-    1,
-    '16 Mar, 2019',
-    'Paul McCartney',
-    'London, UK',
-    'VISA ⠀•••• 2574',
-    866.99,
-  ),
-  createMockOrders(2, '16 Mar, 2019', 'Tom Scholz', 'Boston, MA', 'MC ⠀•••• 1253', 100.81),
-  createMockOrders(
-    3,
-    '16 Mar, 2019',
-    'Michael Jackson',
-    'Gary, IN',
-    'AMEX ⠀•••• 2000',
-    654.39,
-  ),
-  createMockOrders(
-    4,
-    '15 Mar, 2019',
-    'Bruce Springsteen',
-    'Long Branch, NJ',
-    'VISA ⠀•••• 5919',
-    212.79,
-  ),
+export const MOCK_INVENTORY_ITEMS = [
+	{ id: 0, name: "Book", price: 15.0, stock: 100 },
+	{ id: 1, name: "Candle", price: 3.0, stock: 100 },
+	{ id: 2, name: "Pen", price: 0.75, stock: 100 },
+	{ id: 3, name: "Paper", price: 5.25, stock: 100 },
+	{ id: 4, name: "Jar", price: 12.5, stock: 100 },
+	{ id: 5, name: "Movie", price: 18.0, stock: 100 },
 ];

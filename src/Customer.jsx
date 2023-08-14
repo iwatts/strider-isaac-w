@@ -1,18 +1,22 @@
 import React from "react";
-import { Grid } from "@mui/material";
-import Title from "./Title";
+import { Grid, Paper, Typography } from "@mui/material";
 import { useLocation } from "react-router-dom";
-import { MOCK_CUSTOMER, MOCK_ORDERS } from "./mocks/mock-data";
+
+import Title from "./Title";
+import CustomerOrders from "./CustomerOrders";
+
+import { MOCK_PLACEHOLDER_CUSTOMER, MOCK_CUSTOMERS } from "./mocks/mock-data";
 
 export default function Customer() {
 	const location = useLocation();
 	const customerId = Number(location.pathname.slice(-1));
-	const customer = MOCK_ORDERS[customerId];
-	const palceholder = MOCK_CUSTOMER;
+	const customer = MOCK_CUSTOMERS.filter((obj) => obj.id === customerId);
+	const palceholder = MOCK_PLACEHOLDER_CUSTOMER;
 
 	return (
 		<React.Fragment>
-			<Title>Customer: {customer.name}</Title>
+			<Title>Customer: {customer[0].name}</Title>
+			<Typography variant="subtitle1" gutterBottom>ID: {customer[0].id}</Typography>
 			<Grid container spacing={3}>
 				<Grid item xs={12}>
 					<div id="customer">
@@ -21,8 +25,12 @@ export default function Customer() {
 						</div>
 
 						<div>
-							<h1>{customer.name ? <>{customer.name}</> : <i>No Name</i>} </h1>
-							<div>{/* Customer Orders go here */}</div>
+							<h1>
+								{customer[0].name ? <>{customer[0].name}</> : <i>No Name</i>}{" "}
+							</h1>
+							<Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
+								<CustomerOrders />
+							</Paper>
 						</div>
 					</div>
 				</Grid>
